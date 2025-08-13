@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: machinepedro/machinepedro.github.io # Seu repositório GitHub
+  branch: main
+  auth_scope: repo
+
+media_folder: "imagens" # Onde os pôsteres serão salvos
+public_folder: "/imagens"
+
+collections:
+  - name: "noticias"
+    label: "Notícias"
+    folder: "noticias"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumo", name: "summary", widget: "string" }
+      - { label: "Pôster", name: "image", widget: "image" }
+      - { label: "Link do Vídeo (YouTube)", name: "video", widget: "string" }
+      - { label: "Conteúdo Completo", name: "body", widget: "markdown" }
+
+
+---
